@@ -19,14 +19,19 @@ enum AppMsg {
     VolSliderChanged(u8),
 }
 
-fn main() -> iced::Result {
+fn main() -> color_eyre::Result<()> {
+    color_eyre::install()?;
+    env_logger::init();
+
     App::run(Settings {
         window: iced::window::Settings {
             size: (400, 150),
             ..Default::default()
         },
         ..Default::default()
-    })
+    })?;
+
+    Ok(())
 }
 
 impl Application for App {
