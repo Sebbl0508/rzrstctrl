@@ -82,9 +82,9 @@ impl From<bool> for SidetoneState {
     }
 }
 
-impl Into<u8> for SidetoneState {
-    fn into(self) -> u8 {
-        match self {
+impl From<SidetoneState> for u8 {
+    fn from(val: SidetoneState) -> Self {
+        match val {
             SidetoneState::Off => 0x00,
             SidetoneState::On => 0x01,
         }
