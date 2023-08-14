@@ -1,0 +1,12 @@
+[package]
+name = "rzrstctrl"
+version = "0.1.0"
+edition = "2021"
+license = "GPLv2"
+
+[dependencies]
+color-eyre = "0.6.2"
+env_logger = "0.10.0"
+iced = "0.10.0"
+log = "0.4.20"
+neli = "0.6.4"
